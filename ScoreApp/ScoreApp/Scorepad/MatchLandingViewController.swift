@@ -12,7 +12,7 @@ class MatchLandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
@@ -24,5 +24,17 @@ class MatchLandingViewController: UIViewController {
         }
         
     }
+    
+    
+    @IBAction func btnActionGotoMatch(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ScorepadDetailViewController")as? ScorepadDetailViewController{
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        
+        
+        
+    }
+    
     
 }
